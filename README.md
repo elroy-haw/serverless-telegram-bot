@@ -7,7 +7,7 @@ Hello world project to create a serverless telegram bot
 3. Python3 installed
 
 ## Deployment
-1. Set the Terraform variables in `terraform.tfvars`.
+1. Set the Terraform variables in `terraform.tfvars`
     ```hcl
     chat_id        = "<YOUR_CHAT_ID>"
     telegram_token = "<YOUR_TELEGRAM_TOKEN>"
@@ -55,7 +55,7 @@ Hello world project to create a serverless telegram bot
     webhook = https://<SOME_ID_GIVEN_BY_AWS>.execute-api.<YOUR_REGION>.amazonaws.com/<YOUR_ENV>/telegram-bot
     ```
    
-3. Copy the `webhook` from the output in previous step and set up the Telegram bot's webhook.
+3. Copy the `webhook` from the output in previous step and set up the Telegram bot's webhook
     - In your terminal, do 
         ```shell script
         curl -X POST -H "content-type: application/json" -d '{"url": "https://<SOME_ID_GIVEN_BY_AWS>.execute-api.<YOUR_REGION>.amazonaws.com/<YOUR_ENV>/telegram-bot", "allowed_updates": ["message"]}' https://api.telegram.org/bot<YOUR_TELEGRAM_TOKEN>/setWebhook
