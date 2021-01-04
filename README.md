@@ -21,7 +21,10 @@ Hello world project to create a serverless telegram bot
     - `YOUR_CHAT_ID`
         - Add your bot to a group chat
         - Send `/start` in the chat
-        - In your terminal, do a `curl https://api.telegram.org/bot<YOUR_TELEGRAM_TOKEN>/getUpdates`
+        - In your terminal, do 
+            ```shell script
+            curl https://api.telegram.org/bot<YOUR_TELEGRAM_TOKEN>/getUpdates
+            ```
         - You should get a response like the following:
             ```json
             {
@@ -53,7 +56,10 @@ Hello world project to create a serverless telegram bot
     ```
    
 3. Copy the `webhook` from the output in previous step and set up the Telegram bot's webhook.
-    - In your terminal, do `curl -X POST -H "content-type: application/json" -d '{"url": "https://<SOME_ID_GIVEN_BY_AWS>.execute-api.<YOUR_REGION>.amazonaws.com/<YOUR_ENV>/telegram-bot", "allowed_updates": ["message"]}' https://api.telegram.org/bot<YOUR_TELEGRAM_TOKEN>/setWebhook`
+    - In your terminal, do 
+        ```shell script
+        curl -X POST -H "content-type: application/json" -d '{"url": "https://<SOME_ID_GIVEN_BY_AWS>.execute-api.<YOUR_REGION>.amazonaws.com/<YOUR_ENV>/telegram-bot", "allowed_updates": ["message"]}' https://api.telegram.org/bot<YOUR_TELEGRAM_TOKEN>/setWebhook
+        ```
    
 4. Add your commands for the bot via @BotFather and start sending messages in the group chat prefixed with those commands
     - Send `/mybots` to @BotFather
