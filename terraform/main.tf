@@ -40,5 +40,4 @@ module "telegram_webhook" {
   lambda_integrations = {
     telegram-bot = module.telegram_bot.function.invoke_arn
   }
-
 }
